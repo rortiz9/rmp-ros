@@ -19,4 +19,5 @@
 
   <!-- Oh, you wanted a robot? -->
   <include file="$(find fetch_gazebo)/launch/include/$(arg robot).launch.xml" />
+
 </launch>

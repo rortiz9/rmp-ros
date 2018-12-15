@@ -2,5 +2,11 @@
   <include file="$(find fetch_navigation)/launch/fetch_nav.launch" >
     <arg name="map_file" value="$(find fetch_gazebo_demo)/maps/test_zone.yaml" />
   </include>
+
+  <!-- Start MoveIt -->
+  <include file="$(find fetch_moveit_config)/launch/move_group.launch" >
+    <arg name="info" value="true"/><!-- publish grasp markers -->
+  </include>
+
   <node name="RMP" pkg="rmp-core" type="rmp.py" output="screen" />
 </launch>
